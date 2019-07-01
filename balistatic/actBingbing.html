@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <base href="<%=basePath%>">
+    
+    <title>My JSP 'tom.jsp' starting page</title>
+    
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	<link rel="stylesheet" type="text/css" href="CSS/skin_CSS.css">
+	<script type="text/javascript">
+			function change(xx)
+			{
+				
+				
+				var url=document.getElementById(xx).src;
+				
+				document.getElementById("picture").src=url;
+				
+			}
+			var i=100;
+			function next()
+			{
+				if(i>=500)
+					i=00;
+				var x=i+100;//起始值
+				
+				for(var j=100;j<500;j=j+100)
+				{
+					document.getElementById(j).src="Images/FBB-"+x+".jpg";
+					x=(x+100)>500?100:x+100;
+				}
+				i=i+100;
+				
+			}
+			
+	</script>
+  </head>
+  
+  <body>
+     <div id="wmw_head">
+  		<%@include file="head.jsp" %>
+  	</div>
+<div id="WebAll">
+  			
+  			<div id="act">
+  				<div class="actPhoto" >
+  					<table border="0">
+  					<tr><td style="height:452px">
+  					<div id="actClear">
+  							<div id="actLeft" style="float:left"><img src="Images/left.jpg" onclick="next()"></div>
+  							<div class="actPicture"  ><img id="100" style="width:136px; height:85px;" src="Images/FBB-100.jpg" onmousemove="change('100')"></div>
+  							<div class="actPicture" ><img  id="200" style="width:136px; height:85px;" src="Images/FBB-200.jpg" onmousemove="change('200')"></div>
+  							<div class="actPicture" ><img  id="300" style="width:136px; height:85px;" src="Images/FBB-300.jpg" onmousemove="change('300')"></div>
+  							<div class="actPicture" ><img  id="400" style="width:136px; height:85px;" src="Images/FBB-400.jpg" onmousemove="change('400')"></div>
+  							
+  							<div id="actLeft" style="float:right"><img src="Images/right.jpg" onclick="next()"></div>
+  					</div>
+  					<img src="Images/FBB-300.jpg" id="picture"/>
+  					</td>
+  					</tr>
+  					</table>
+  				</div>
+  				<div id="actName">百变女王范冰冰 </div>
+  				<div id="actMovie">
+  					正式加入巴黎欧莱雅代言人"梦之队"
+  					<img src="Images/fbb06.jpg">
+  					<div id="actGo">&nbsp;>观看明星精彩视频</div>
+  				</div>
+  			</div>
+  			<div id="introduce">
+  					<div id="introduce1">
+  						<div id="inPhoto1"><h3>在2010年第63届戛纳国际电影节开幕之际，全球著名化妆品牌巴黎欧莱雅高调向世人宣布牵手中国影星范冰冰正式加入巴黎欧莱雅明星"梦之队"，成为巴黎欧莱雅亚洲区最新代言人。由此，范冰冰成为继巩俐、李冰冰之后又一位加盟巴黎欧莱雅明星"梦之队"庞大阵容的华人女影星。</h3></div>
+  					</div>
+  					
+  					<div id="inMovie">
+  							<h1>范冰冰简介</h1>
+							<h3>范冰冰，出生于山东省青岛市，毕业于上海谢晋恒通艺术学校。她是中国一线女演员，同时也是歌手，她经常被称赞为中国最美的女人之一。
+
+1997年参演琼瑶剧《还珠格格》至今，已参与50多部影视作品的演出。2003年首次亮相大荧幕，在冯小刚导演的贺岁片《手机》中饰演武月一角，成功转型为一线电影女星。2005年发表第一张个人专辑《刚刚开始》展示了她音乐天赋的一面。2004年范冰冰获得第27届大众电影百花奖"最佳女演员"奖，她的努力与敬业得到了众多业界人士的肯定与认同，被称为中国最佳女演员之一。</h3>
+  					</div>
+  					<div id="inMovieLeft">
+  							<h1>主要作品</h1>
+  							<h3>主要影视作品：<br/>
+《还珠格格》，《河东狮吼》，《十月围城》，《新宿事件》，《心中有鬼》，《情癫大圣》，《非常完美》，《未来警察》，《日照重庆》，《金大班》，《胭脂雪》，《爱情呼叫转移》，《墨攻》，《手足情》，《苹果》，《手机》，《麦田》，《东风雨》，《精武门》，《Stretch》等。　</h3>
+  					</div>
+  					<div id="inMovieLeft">
+  						<div id="bitu1"></div>
+  					</div>
+  					<div id="liAndBa">
+  							<div id="moush1"></div>
+  							<div id="liAnd">
+  								<h1>范冰冰与巴黎欧莱雅</h1>
+  								<h3>巴黎欧莱雅品牌总经理陈素慧女士表示，"范冰冰拥有令人窒息的美貌与让人羡慕的好肌肤，她与生俱来的独特气质，很好地诠释了现代女性自信、独立、自我的张扬个性与时代特征，更重要的是，千娇百媚的她有着一股一往无前把博事业的勇气，有着一颗执着坚定、永不言退的心，正是凭借这种认真努力的态度、奋斗拼搏的精神，使她一步一步完美蜕变，从一名电视剧演员成功转型为电影演员，并大胆尝试各种不同的角色，即使备受争议，仍然坚持挑战自我，追求极致完美。我们十分欣赏范冰冰身上这些珍贵的闪光点，期待她的加入让巴黎欧莱雅更彰显多元化的与众不同的美！也相信范冰冰一定能赢得来自世界更多人的认可与关注，她一定能拥有一个更为星光璀璨的未来！"</h3>
+  							</div>
+  					</div>
+  					<div id="inMovieRight">
+  							<h1>所有代言人</h1>
+  							<h4><a href="#">范冰冰</a>&nbsp;<a href="actGong.html">巩&nbsp;俐&nbsp;</a><a href="actLi.html">李冰冰</a></h4>
+  							<h4><a href="#">李宇春</a><a href="actRuan.html">阮经天</a><a href="#">吴彦祖</a></h4>
+  					</div>
+  					<div id="adver">
+  						<h1>更多广告大片</h1>
+  						<a href="#"><img src="Images/fbb03.jpg" border="0"></a>
+  						<a href="#"><img src="Images/fbb04.jpg" border="0"></a>
+  						<a href="#"><img src="Images/fbb05.jpg" border="0"></a>
+  					</div>
+  			</div>
+   			 <div id="footeraa"><img src="Images/footer.jpg" width="950" height="139"/></div>
+   		</div>
+  </body>
+</html>
+  	

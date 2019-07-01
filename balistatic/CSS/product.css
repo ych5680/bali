@@ -1,0 +1,136 @@
+@CHARSET "UTF-8";
+*{
+	margin:0px;padding:0px;
+}
+
+#container{
+	margin:0px auto;
+	width:1366px;
+	height:auto;
+	background: black;
+}
+#header{
+	width: 1366px;
+	height:150px;;
+}
+#main{
+	width:985px;
+	height:auto;
+	background-color: gray;
+	margin-left: 13%;
+	color: windowtext;
+	
+}
+	.titlewel{
+	width:100%;
+	height:25px;
+	font-size: 15px ;
+	padding-left:25px;
+	line-height: 25px;
+	}
+	#left{
+		width:200px;
+		height:600px;
+		float: left;
+		background-color: green;
+	}
+	#left a{
+			text-decoration: none;
+			font-weight:normal;
+			font-size: 14px;
+			color: black;
+	}
+		
+		.modi{
+			font-size: 25px;
+			color: red;
+		}
+		.modi1{
+			padding-left:15px;
+			font-size: 20px;
+			color: navy;
+		}
+		.allPro{
+			heitht:50px;
+			width: 200px;
+			background:aqua;
+			line-height: 50px;
+		}
+		
+		.proType{
+			width:200px;
+			height:200px;
+			background:aqua;
+			border-top: 2px gray solid;
+		}
+		.proType ul{
+			margin-top:10px;
+		}
+		.proType ul li{
+			list-style: none;
+			padding: 10px;
+		}
+	
+	#right{
+		width:785px;
+		height:600px;
+		float: left;
+		background-color: pink;
+	}
+		.productList{
+			
+			width:785px;
+			height:565px;
+			font-size: 15px;
+		}
+		.productList dl{
+			margin:5px 15px;
+			padding:10px;
+			float: left;
+			width: 200px;
+			height: 220px;
+		}
+		.productList dd{
+			padding:3px 0px 0px 15px;
+			
+		}
+		.productList #proTable{
+			width: 750px;
+			height: 540px;
+			font-size: 15px;
+			text-align: center;
+			margin: 5px auto;
+		}
+		.productList .detail{
+			font-size: 12px;
+			font-weight:normal;
+			color:orange;
+		}
+		.pageList{
+			padding-left:15px;
+			padding-bottom:10px;
+			width:785px;
+			height:35px;
+			font-size: 12px;
+		}
+		.pageList a{
+			text-decoration: none;
+			font-size: 12px;
+			color: gray;
+		}
+		.pageList li{
+			float:left; 
+			list-style: none;
+			padding-left: 1px;
+		}
+
+#footeraa
+	{
+		clear:both;
+		width:985px;
+		height:139px;
+		margin-left: 13%;
+		margin-top: 20px;
+		
+		background-image: url("../Images/footer.jpg");
+	}

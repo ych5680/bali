@@ -1,0 +1,89 @@
+
+<html>
+  <head>
+    <title>商品列表</title>
+    
+	<link rel="stylesheet" type="text/css" href="CSS/product.css"/>
+
+	  <link rel="stylesheet" type="text/css" href="CSS/style.css"/>
+	  <link rel="stylesheet" type="text/css" href="CSS/head_CSS.css"/>
+	  <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+	  <script type="text/javascript" src="js/common.js"></script>
+	  <script type="text/javascript" src="js/product.js"></script>
+	  <script type="text/javascript" src="js/getUserName.js"></script>
+  </head>
+  
+  <body>
+  <div id="container">
+    <div id="header">
+		<div id="WebAll1">
+			<div id="WebTopAll" onmouseout="hide()">
+				<div id="WebPicture" onmouseout="hide()"></div>
+				<div id="WebLink" onmouseout="hide()">
+					<a href="#"><img src="Images/qq.gif" border="0"> </a> <a
+						href="#"><img src="Images/youku.gif" border="0"> </a>
+					<a href="buyList.html"><img src="Images/shop.jpg" border="0">已购商品表</a>
+				</div>
+				<div id="WebAdd" style="color: white">
+					<span id="userName"></span> <a href="logout.html">注销</a>
+				</div>
+			</div>
+			<div id="divShow3" style="height: 320px;">
+				<div id="divShow2">
+					<div id="divShow1" style="float:left">
+						<a href="javascript:void(0);">品牌故事</a>&nbsp;&nbsp;
+					</div>
+
+				</div>
+
+				<div class="showDiv">
+					<div id="hair">
+						<div id="hairNeed">
+							<div class="title">欢迎进入</div>
+							<div class="title">
+								<hr style="color:black" />
+							</div>
+							<table border="0" style="font-weight:bold">
+								<tr><td><a href='rightUrl'>rightText</a></td></tr>
+							</table>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+    </div>
+    <div id="main">
+    	<h3 class="titlewel">欢迎选购商品</h3>
+    	<div id="left">
+    		<h3 class="modi">商品分类</h3>
+
+    		<h3 class="allPro"><a id="allProduct" href="javascript:void(0)" style="font-size: 18px;font-weight:bold; color: red;">全部商品</a></h3>
+
+    		<div class="proType" id="proType">
+
+    		</div>
+
+    	</div>
+    	<div id="right">
+    	<div class="productList" id="productList">
+
+
+    	</div>
+    	<ul class="pageList">
+			<li>共<span id="totalCount"></span>条记录&nbsp;&nbsp;
+			第<span id="pageNo"></span>页/&nbsp;共<span id="totalPage"></span>页</li>
+    		<li><a href="javascript:void(0);" id="firstPage">首页</a></li>
+    		<li><a href="javascript:void(0);" id="previousPage"/>上一页</a></li>
+    		<li><a href="javascript:void(0);" id="nextPage"/>下一页</a></li>
+    		<li><a href="javascript:void(0);" id="lastPage"/>尾页</a></li>
+    	</ul>
+    	</div>
+    </div>
+    <div id="footeraa"></div>
+  </div>
+  </body>
+</html>

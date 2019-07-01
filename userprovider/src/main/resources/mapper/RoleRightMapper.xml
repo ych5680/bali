@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.bdqn.bali.mapper.RoleRightMapper">
+    <resultMap id="roleRightMap" type="RoleRight">
+        <id column="rf_id" property="rfId"/>
+        <result column="rf_role_id" property="rfRoleId"/>
+        <result column="rf_right_code" property="rfRightCode"/>
+        <association property="sysRight" javaType="SysRight">
+            <id column="right_code" property="rightCode"/>
+            <result column="right_parent_code" property="rightParentCode"/>
+            <result column="right_text" property="rightText"/>
+            <result column="right_url" property="rightUrl"/>
+        </association>
+    </resultMap>
+    <select id="getRoleRightListByRoleId" resultMap="roleRightMap" parameterType="long">
+                SELECT * FROM role_right R
+                INNER JOIN sys_right S
+                ON R.`rf_right_code`=S.`right_code`
+                WHERE R.`rf_role_id` = #{roleId}
+                GROUP BY R.rf_right_code
+    </select>
+
+
+</mapper>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.bdqn.bali.mapper.ProductMapper">
+    <resultMap id="buyList" type="BuyList">
+        <result property="productNum" column="product_num"></result>
+        <association property="product" javaType="Product">
+            <result property="price" column="price"></result>
+            <result property="productName" column="product_name"></result>
+            <association property="childType" javaType="ChildType">
+                <result property="childName" column="child_name"></result>
+            </association>
+        </association>
+    </resultMap>
+
+    <select id="findBuyList" resultType="cn.bdqn.bali.vo.BuyListVo">
+        SELECT
+            B.`product_num` as productNum,
+            P.`product_name` as productName,
+            P.`price` as price,
+            C.`child_name` as childName
+        FROM
+            buy_list B
+        INNER JOIN product P ON B.`product_id`=P.`product_id`
+        INNER JOIN child_type C ON P.`product_type_id`=C.`child_type_id`
+        WHERE B.`user_id`= #{userId}
+    </select>
+
+    <insert id="addProductToBuyList">
+        INSERT INTO buy_list (
+            `product_id`,
+            `product_num`,
+            `user_id`
+        )
+        VALUES
+        ( #{productId},
+          #{productNum},
+          #{UserId})
+    </insert>
+    <resultMap id="bigTypeMap" type="BigType">
+        <id column="type_id" property="typeId"></id>
+        <result column="product_type_name" property="productTypeName"></result>
+        <association property="childTypes" javaType="ChildType">
+            <id column="child_type_id" property="childTypeId"></id>
+            <result column="child_name" property="childName"></result>
+        </association>
+    </resultMap>
+    <select id="findBigType" resultMap="bigTypeMap">
+        SELECT
+            B.`type_id`,
+            B.`product_type_name` ,
+            C.`child_name`,
+            C.`child_type_id`
+        FROM
+            big_type B INNER JOIN child_type C ON B.`type_id`=C.`big_id`
+    </select>
+    <select id="getProductTotalCount" resultType="int">
+        SELECT count(1) from product
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="productTypeId != null and productTypeId != 0">
+                and product_type_id = #{productTypeId}
+            </if>
+        </trim>
+    </select>
+    <select id="findProductByPage" resultType="Product">
+        SELECT
+            product_id as productId,
+            product_name as productName,
+            price as price,
+            picture as picture,
+            information as information,
+            useWay as useway,
+            product_type_id as productTypeId
+        FROM
+            product
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="productTypeId != null and productTypeId != 0">
+                and product_type_id = #{productTypeId}
+            </if>
+        </trim>
+    </select>
+</mapper>

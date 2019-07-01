@@ -1,0 +1,20 @@
+server:
+  port: 7004
+spring:
+  application:
+    name: user-consumer
+
+  redis:
+    database: 1
+    host: 127.0.0.1
+    port: 6379
+    timeout: 300
+eureka:
+  instance:
+    hostname: ${spring.cloud.client.ipAddress}
+  client:
+    service-url:
+      defaultZone: http://root:123456@localhost:7001/eureka
+feign:
+  httpclient:
+    connection-timeout: 5000

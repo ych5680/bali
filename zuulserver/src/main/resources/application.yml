@@ -1,0 +1,15 @@
+server:
+  port: 7002
+eureka:
+  instance:
+    hostname: ${spring.cloud.client.ipAddress}
+  client:
+    service-url:
+      defaultZone: http://root:123456@localhost:7001/eureka
+spring:
+  application:
+    name: zuul-server
+zuul:
+  routes:
+    user-consumer: /user/**  #网关请求路径
+    provider-consumer: /product/**  #网关请求路径

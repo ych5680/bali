@@ -1,0 +1,50 @@
+<%@ page language="java" import="java.util.*" pageEncoding="gbk"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <base href="<%=basePath%>">
+    
+    <title>My JSP 'buy.jsp' starting page</title>
+	<link rel="stylesheet" type="text/css" href="CSS/buy_CSS.css" />
+	<script src="js/buy_js.js" language="javascript"></script>
+
+  </head>
+  
+  <body>
+      <div id="wmw_head">
+  		<%@include file="head.jsp" %>
+  	</div>
+   <div id="main">
+    	<div id="m">
+        	<div id="top">
+            	<div id="leftImg">∑≈…Ã∆∑Õº∆¨</div>
+                <div id="rightTopMain"><img src="image/Hydra_Fres.png" width="330" height="50" /></div>
+                <div id="rightMiddleMain">asf</div>
+                <div id="rightDownMain">sdgfdhf</div>
+                <div id="rightDownMainWord"></div>
+                <div id="buy"><img src="Images/buy.jpg" /></div>
+            </div>
+            <div id="downDown">
+            	<div id="left11">
+            	<div id="downTop">
+                		<div id="top1"><img src="Images/1.jpg" id="leftImg1"/><img src="Images/2.jpg" id="leftImg2" onclick="c('1')" style="display:none" /></div>
+                        <div id="top2"><img src="Images/3.jpg" id="leftImg3"  onclick="c('2')"/><img src="Images/4.jpg" id="leftImg4" style="display:none" /></div>
+                </div>
+                <div id="down2" class="d2">
+                	diyi
+                </div>
+                <div id="down3" class="d3" style="display:none">
+                	haha haha haha 
+                </div>
+                </div>
+            </div>
+        </div>
+         <div id="footeraa"><img src="Images/footer.jpg" width="950" height="139"/></div>
+    </div>
+</body>
+</html>

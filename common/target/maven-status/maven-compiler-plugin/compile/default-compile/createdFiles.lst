@@ -1,0 +1,13 @@
+cn\bdqn\bali\dto\Dto.class
+cn\bdqn\bali\dto\DtoUtil.class
+cn\bdqn\bali\pojo\UserInfo.class
+cn\bdqn\bali\pojo\BuyList.class
+cn\bdqn\bali\pojo\Product.class
+cn\bdqn\bali\pojo\RoleInfo.class
+cn\bdqn\bali\vo\RoleRightVo.class
+cn\bdqn\bali\vo\UserInfoVo.class
+cn\bdqn\bali\pojo\SysRight.class
+cn\bdqn\bali\pojo\BigType.class
+cn\bdqn\bali\pojo\RoleRight.class
+cn\bdqn\bali\pojo\ChildType.class
+cn\bdqn\bali\util\PageBean.class
